@@ -48,7 +48,6 @@ func TestSolver_RankState(t *testing.T) {
 				side:       Cross,
 				stateRanks: map[State]StateRank{},
 			}
-			t.Log(tt.args.state)
 			if got := s.RankState(tt.args.state); got != tt.want {
 				t.Errorf("RankState() = %v, want %v", got, tt.want)
 			}
@@ -86,7 +85,8 @@ func TestSolver_NextMove(t *testing.T) {
 	if err != nil {
 		panic(err)
 	}
-	if state.WhoWon() != Circle {
+	_, side := state.WhoWon()
+	if side != Circle {
 		t.Fail()
 	}
 }
