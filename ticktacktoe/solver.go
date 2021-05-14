@@ -8,9 +8,7 @@ type StateRank byte
 const (
 	Unknown StateRank = iota
 	Defeat
-	PossibleDefeat
 	Draw
-	PossibleVictory
 	Victory
 )
 

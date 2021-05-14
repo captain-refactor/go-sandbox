@@ -10,15 +10,13 @@ func _() {
 	var x [1]struct{}
 	_ = x[Unknown-0]
 	_ = x[Defeat-1]
-	_ = x[PossibleDefeat-2]
-	_ = x[Draw-3]
-	_ = x[PossibleVictory-4]
-	_ = x[Victory-5]
+	_ = x[Draw-2]
+	_ = x[Victory-3]
 }
 
-const _StateRank_name = "UnknownDefeatPossibleDefeatDrawPossibleVictoryVictory"
+const _StateRank_name = "UnknownDefeatDrawVictory"
 
-var _StateRank_index = [...]uint8{0, 7, 13, 27, 31, 46, 53}
+var _StateRank_index = [...]uint8{0, 7, 13, 17, 24}
 
 func (i StateRank) String() string {
 	if i >= StateRank(len(_StateRank_index)-1) {
